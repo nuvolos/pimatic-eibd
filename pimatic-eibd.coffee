@@ -51,13 +51,13 @@ module.exports = (env) ->
     #
     #
     init: (app, @framework, @config) =>
-      @zm = new ZoneManager @config.zones, this
+      @zm = new ZoneManager (_.cloneDeep @config.zones), this
       deviceConfigDef = require "./device-config-schema"
       common = deviceConfigDef.Common.properties
 
       for dtname, dtclass of deviceTypes
         do (dtname, dtclass) =>
-          confDef = deviceConfigDef[dtname]
+          confDef = _.cloneDeep deviceConfigDef[dtname]
           _.extend confDef.properties, _.cloneDeep common
 
           dclass =
