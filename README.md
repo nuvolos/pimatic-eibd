@@ -1,4 +1,4 @@
-pimatic-plugin-template
+pimatic-eibd
 =======================
 
 `pimatic-eibd` is a pimatic plugin to interface wiht a knx bus through an eibd daemon that should be deployed somewhere reachable via IP.
