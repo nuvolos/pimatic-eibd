@@ -1,7 +1,7 @@
 pimatic-plugin-template
 =======================
 
-pimatic-eibd is a pimatic plugin to interface wiht a knx bus through an eibd daemon that should be deployed somewhere reachable via IP.
+`pimatic-eibd` is a pimatic plugin to interface wiht a knx bus through an eibd daemon that should be deployed somewhere reachable via IP.
 
 The plugin can be configured with several zones (several eibd daemons) for cases where multi-building control is indicated.
 
@@ -9,7 +9,7 @@ The plugin is in a very early stage, and is not yet available from npm
 
 ## Dependencies
 
-The only current dependency is with the `eibd` nodejs package, which implements communication with the eibd daemon within node.
+The only current dependency is with the [eibd](https://github.com/andreek/node-eibd) nodejs package, which implements communication with the [eibd](https://sourceforge.net/projects/bcusdk/) daemon from within node.
 
 ## Devices implemented
 
