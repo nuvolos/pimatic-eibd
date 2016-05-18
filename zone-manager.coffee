@@ -18,8 +18,8 @@ module.exports = (env) ->
     constructor: (@zone, @index) ->
       @connection = new eibd.Connection()
       @connection.on 'close', () =>
-        env.logger.warn "Lost zone #{@index}:#{@zone.id}. Retrying in 100 seconds."
-        setMyTimeout 10000, @_openConnection
+        env.logger.warn "Lost daemon for zone #{@index}:#{@zone.id}. Retrying in 100 seconds."
+        setMyTimeout 100000, @_openConnection
       @_openConnection()
 
     registerGAD: (gad, dpt) =>
