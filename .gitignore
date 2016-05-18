@@ -1,0 +1,10 @@
+*.sqlite
+node_modules
+doc/*
+*.js
+.npm/*
+.node-gyp/*
+*.map
+*/*.js
+*/*.map
+
