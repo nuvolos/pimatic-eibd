@@ -86,26 +86,26 @@ module.exports =
     type: "object"
     properties:
       dpt:
-        description: "Type of the value"
+        description: "KNX type in which the measurement is encoded"
         type: "string"
         default: "DPT1"
       status:
-        description: "GAD where the sensor writes the temperature"
+        description: "GAD where the sensor writes the reading"
         type: "string"
       magnitude:
         description: "What physical magnitude is this a measure of"
         type: "string"
       unit:
-        description: "Units of whatever is being sensed"
+        description: "Unit in which the sensor measures the physical magnitude"
         type: "string"
+      presentationUnit:
+        description: "Unit in which the sensed magnitude is to be shown"
+        type: "string"
+        required: false
       acronym:
         description: "Acronym for the magnitude"
         type: "string"
         required: false
-      scale:
-        description: "Factor to divide the value to obtain the unit configured"
-        type: "number"
-        default: 1
       poll:
         description: "Poll interval. 0 == no polling"
         type: "number"
@@ -118,13 +118,17 @@ module.exports =
         description: "GAD where the sensor writes the temperature"
         type: "string"
       poll:
-        description: "Do we need to poll?"
+        description: "polling period. No polling if 0"
         type: "number"
         default: 0
       unit:
-        description: "Units of whatever is being sensed"
+        description: "Units in which temperature is captured by the sensor"
         type: "string"
-        default: "ºC"
+        default: "C"
+      presentationUnit:
+        description: "Units in which temperature is to be shown"
+        type: "string"
+        required: false
   KnxTrigger:
     description: "a sensor, producing pulse events. The state cannot be read"
     properties:

@@ -31,6 +31,7 @@ module.exports = (env) ->
     'knx-shutter'
     'knx-dimmer'
     'knx-sensor'
+    'knx-temperature'
   ]
     # convert kebap-case to camel-case notation with first character capitalized
     className = device.replace /(^[a-z])|(\-[a-z])/g, ($1) -> $1.toUpperCase().replace('-','')
@@ -51,6 +52,7 @@ module.exports = (env) ->
     #
     #
     init: (app, @framework, @config) =>
+      env.framework.instance = @framework
       @zm = new ZoneManager (_.cloneDeep @config.zones), this
       deviceConfigDef = require "./device-config-schema"
       common = deviceConfigDef.Common.properties
