@@ -129,6 +129,24 @@ module.exports =
         description: "Units in which temperature is to be shown"
         type: "string"
         required: false
+  KnxDateTime: # clock syncing in the installation
+    description: "Clocks & calendars with DPT10 and DPT11 respectively"
+    type: "object"
+    properties:
+      rate:
+        description: "seconds between updates"
+        type: "number"
+        default: "10"
+      gads:
+        description: "Group address(es)"
+        type: "object"
+        properties:
+          setTime:
+            description: "GAD where the time is written"
+            type: "string"
+          setDate:
+            description: "GAD where the dat is written"
+            type: "string"
   KnxTrigger:
     description: "a sensor, producing pulse events. The state cannot be read"
     properties:
