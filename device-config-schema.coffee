@@ -145,7 +145,7 @@ module.exports =
             description: "GAD where the time is written"
             type: "string"
           setDate:
-            description: "GAD where the dat is written"
+            description: "GAD where the date is written"
             type: "string"
   KnxTrigger:
     description: "a sensor, producing pulse events. The state cannot be read"

@@ -32,6 +32,7 @@ module.exports = (env) ->
     'knx-dimmer'
     'knx-sensor'
     'knx-temperature'
+    'knx-date-time'
   ]
     # convert kebap-case to camel-case notation with first character capitalized
     className = device.replace /(^[a-z])|(\-[a-z])/g, ($1) -> $1.toUpperCase().replace('-','')
