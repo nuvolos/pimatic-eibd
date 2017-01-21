@@ -39,9 +39,11 @@ module.exports = (env) ->
             callback err
             return
           if action == 'read'
-            msg = eibd.createMessage action, dpt, parseFloat value
+            msg = eibd.createMessage action, dpt, 0 # the value is inmaterial for a read
           else
-            msg = eibd.createMessage action, dpt, parseFloat value
+            if (typeof value == "string")
+              value = parseFloat value
+            msg = eibd.createMessage action, dpt, value
           conn.sendAPDU msg, callback
 
     _openConnection: () =>

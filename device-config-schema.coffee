@@ -136,7 +136,7 @@ module.exports =
       rate:
         description: "seconds between updates"
         type: "number"
-        default: "10"
+        default: 10
       gads:
         description: "Group address(es)"
         type: "object"
