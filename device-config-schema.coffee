@@ -154,6 +154,6 @@ module.exports =
         description: "Type of the event"
         type: "string"
         default: "DPT1"
-      pulse:
+      status:
         description: "GAD where the event is posted"
         type: "string"
