@@ -14,6 +14,46 @@ module.exports =
         description: "Nominal id of the zone this device is on. Has priority over the index"
         type: "string"
         required: false
+
+  KnxHeatPump:
+    description: "Heat Pump indoor unit device"
+    type: "object"
+    properties:
+      gads:
+        description: "Group address(es)"
+        type: "object"
+        properties:
+          set:
+            description: "GAD for setting the power state of the device"
+            type: "string"
+          get:
+            description: "GAD to observe the power state of the device or read it"
+            type: "string"
+            required: false          
+          temp:
+            description: "GAD for setting the target temperature of the device"
+            type: "string"
+          tempStatus:
+            description: "GAD to observe the set target temperature"
+            type: "string"
+            required: false
+          fan:
+            description: "GAD to set the fan speed"
+            type: "string"
+            required: false
+          fanStatus:
+            description: "GAD to ascertain the programmed fan speed"
+            type: "string"
+            required: false
+          mode:
+            description: "GAD to set the mode of the HP: heating, cooling, ventilation, dehumidification"
+            type: "string"
+            required: false
+          modeStatus:
+            description: "GAD to find the set mode in the device"
+            type: "string"
+            required: "false"
+  
   KnxPower:
     description: "Power switch device"
     type: "object"
